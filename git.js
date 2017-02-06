@@ -5,17 +5,10 @@ if (!which('git')) {
   exit(1)
 }
 
-// Run external tool synchronously
-// if (exec('git diff').code !== 0) {
-//   echo('Error: Git commit failed');
-//   exit(1);
-// }
-
-// console.log('diff', exec('git diff').stdout)
-
-
-const addFile = () => {
-  exec('git commit -am "Add new TIL"')
+exports.addFile = (commitMsg) => {
+  exec(`git commit -am "${commitMsg}"`)
 }
 
-addFile()
+exports.pushFile = () => {
+  exec('git push')
+}

@@ -1,6 +1,8 @@
 const fs = require('fs')
 const inquirer = require('inquirer')
 
+const Git = require('./git')
+
 inquirer.prompt([
   {
     type: 'input',
@@ -14,6 +16,7 @@ inquirer.prompt([
   }
 ]).then((answers) => {
   writeNotes(answers)
+  Git.addFile(answers.title)
 })
 
 const writeNotes = ({

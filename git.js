@@ -5,8 +5,12 @@ if (!which('git')) {
   exit(1)
 }
 
-exports.addFile = (commitMsg) => {
-  exec(`git commit -am "${commitMsg}"`)
+exports.addFile = (file) => {
+  exec(`git add ${file}`)
+}
+
+exports.commitFile = (msg) => {
+  exec(`git commit -m "${msg}"`)
 }
 
 exports.pushFile = () => {

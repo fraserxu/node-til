@@ -10,3 +10,9 @@ this is a test tip
 nothing interesting
 
 </details>
+
+<details>
+  <summary>nothing fancy</summary>
+this is some test text
+
+</details>

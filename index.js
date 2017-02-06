@@ -16,7 +16,9 @@ inquirer.prompt([
   }
 ]).then((answers) => {
   writeNotes(answers)
-  Git.addFile(answers.title)
+  Git.addFile('fixture.md')
+  Git.commitFile(`TIL: ${answers.title}`)
+  Git.pushFile()
 })
 
 const writeNotes = ({

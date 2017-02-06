@@ -1,2 +1,2 @@
 # til-cli
-til from command line
+Track "today I learn" til from command line

@@ -1,18 +1,18 @@
-require('shelljs/global')
+const shelljs = require('shelljs')
 
-if (!which('git')) {
+if (!shelljs.which('git')) {
   echo('Sorry, this script requires git')
   exit(1)
 }
 
 exports.addFile = (file) => {
-  exec(`git add ${file}`)
+  shelljs.exec(`git add ${file}`)
 }
 
 exports.commitFile = (msg) => {
-  exec(`git commit -m "${msg}"`)
+  shelljs.exec(`git commit -m "${msg}"`)
 }
 
 exports.pushFile = () => {
-  exec('git push')
+  shelljs.exec('git push')
 }

@@ -1,14 +1,23 @@
 # til-cli
 Track "today I learn" til from command line
 
-<details>
-  <summary>another test</summary>
-test
+### Installation
 
-</details>
+```
+$ npm i -g til-cli
+```
 
-<details>
-  <summary>this is awesome</summary>
-nope.
+### Usage
 
-</details>
+Run `til` at your til repo, and then type
+
+```
+$ til
+```
+
+### Roadmap
+
+* To be able to config the path of the `til` repo and run it anywhere.
+
+### License
+MIT

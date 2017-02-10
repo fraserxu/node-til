@@ -15,16 +15,17 @@ inquirer.prompt([
     message: 'Tell me more about it.'
   }
 ]).then((answers) => {
-  writeNotes(answers)
-  Git.addFile('fixture.md')
-  Git.commitFile(`TIL: ${answers.title}`)
-  Git.pushFile()
+  writeNotes(answers, () => {
+    Git.addFile('README.md')
+    Git.commitFile(`TIL: ${answers.title}`)
+    Git.pushFile()
+  })
 })
 
 const writeNotes = ({
   title,
   description
-}) => {
+}, cb) => {
   let writeStream = fs.createWriteStream('fixture.md', {
     flags: 'a'
   })
@@ -35,4 +36,5 @@ ${description}
 </details>`
   writeStream.write(msg)
   writeStream.end('\n')
+  writeStream.on('end', cb)
 }

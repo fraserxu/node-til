@@ -16,3 +16,9 @@ nothing interesting
 this is some test text
 
 </details>
+
+<details>
+  <summary>nodejs path.join does not work for http protocol url</summary>
+path.join only works for file system.
+
+</details>

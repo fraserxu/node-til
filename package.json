@@ -1,11 +1,14 @@
 {
   "name": "til-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "til from command line",
   "main": "index.js",
   "repository": {
     "url": "git@github.com:fraserxu/til-cli.git",
     "type": "git"
+  },
+  "bin": {
+    "til": "index.js"
   },
   "author": "Fraser Xu <xvfeng123@gmail.com>",
   "license": "MIT",

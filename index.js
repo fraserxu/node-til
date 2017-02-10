@@ -38,5 +38,5 @@ ${description}
 </details>`
   writeStream.write(msg)
   writeStream.end('\n')
-  writeStream.on('end', cb)
+  writeStream.on('close', cb)
 }

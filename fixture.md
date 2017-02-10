@@ -34,3 +34,9 @@ TIL `npm run scrip -s` option silences npm own output. Perfect to remove extra l
 test
 
 </details>
+
+<details>
+  <summary>test</summary>
+test
+
+</details>

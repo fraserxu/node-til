@@ -4,6 +4,7 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 
 const Git = require('./git')
+const SOURCE_FILE = 'README.md'
 
 inquirer.prompt([
   {
@@ -18,7 +19,7 @@ inquirer.prompt([
   }
 ]).then((answers) => {
   writeNotes(answers, () => {
-    Git.addFile('README.md')
+    Git.addFile(SOURCE_FILE)
     Git.commitFile(`TIL: ${answers.title}`)
     Git.pushFile()
   })
@@ -28,7 +29,7 @@ const writeNotes = ({
   title,
   description
 }, cb) => {
-  let writeStream = fs.createWriteStream('fixture.md', {
+  let writeStream = fs.createWriteStream(SOURCE_FILE, {
     flags: 'a'
   })
   const msg = `

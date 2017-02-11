@@ -1,10 +1,10 @@
-# til-cli
+# node-til
 Track "today I learn" til from command line
 
 ### Installation
 
 ```
-$ npm i -g til-cli
+$ npm i -g node-til
 ```
 
 ### Usage

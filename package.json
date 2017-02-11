@@ -1,10 +1,10 @@
 {
-  "name": "til-cli",
+  "name": "node-til",
   "version": "0.0.1",
   "description": "til from command line",
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:fraserxu/til-cli.git",
+    "url": "git@github.com:fraserxu/node-til.git",
     "type": "git"
   },
   "bin": {
